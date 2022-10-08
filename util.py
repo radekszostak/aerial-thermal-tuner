@@ -1,8 +1,3 @@
-import imp
-import subprocess
-import os
-import re
-from tqdm import tqdm
 def dms2dec(dms):
     d = float(dms[0])
     m = float(dms[1])
