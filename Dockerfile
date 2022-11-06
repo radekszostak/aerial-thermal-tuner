@@ -26,9 +26,8 @@ RUN pip install ipyleaflet
 RUN pip install leafmap
 RUN pip install xarray_leaflet
 RUN pip install localtileserver
+RUN pip install rasterstats
+RUN pip install scipy
 #---
-RUN git clone https://radekszostak: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@github.com/radekszostak/aerial-thermal-tuner /home/aerial-thermal-tuner
-WORKDIR /home/aerial-thermal-tuner
-#---
-EXPOSE 8888
-ENTRYPOINT ["jupyter", "lab", "--port=8888", "--ip=0.0.0.0", "--allow-root", "--no-browser"]
+
+ENTRYPOINT ["jupyter", "lab", "--port=8888", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''"]

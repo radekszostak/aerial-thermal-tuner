@@ -1,1 +1,7 @@
 /__pycache__
+/.docker
+/test
+/data
+*-checkpoint.ipynb
+log.txt
+test.ipynb
