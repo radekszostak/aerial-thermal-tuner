@@ -1,5 +1,5 @@
 docker build -t aerial-thermal-tuner .
-docker run ^
+call start cmd /C docker run ^
 -v %cd%:/home/workdir ^
 -v %cd%/.docker/.vscode-server:/root/.vscode-server ^
 -v %cd%/.docker/.vscode-server-insiders:/root/.vscode-server-insiders ^

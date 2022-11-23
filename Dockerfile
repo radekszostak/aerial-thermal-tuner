@@ -4,9 +4,7 @@ RUN apt-get install -y python3.9
 RUN apt-get install -y python3-pip
 RUN apt-get install -y git
 RUN apt-get install -y exiftool
-#---
-RUN git config --global user.email "radoslawszostak@gmail.com"
-RUN git config --global user.name "Radoslaw Szostak"
+RUN apt-get install -y python3-opencv
 #---
 RUN apt-get install -y gdal-bin
 RUN apt-get install -y libgdal-dev
@@ -28,6 +26,11 @@ RUN pip install xarray_leaflet
 RUN pip install localtileserver
 RUN pip install rasterstats
 RUN pip install scipy
+RUN pip install opencv-python
+RUN pip install ipympl 
+RUN pip install memory_profiler
+RUN pip install line_profiler
+RUN pip install rasterstats
 #---
 
 ENTRYPOINT ["jupyter", "lab", "--port=8888", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''"]
