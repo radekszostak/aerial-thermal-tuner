@@ -7,4 +7,5 @@ call start cmd /C docker run ^
 -p 8888:8888 ^
 -e LD_LIBRARY_PATH=/home/workdir/lib ^
 --rm ^
+--shm-size 8G ^
 aerial-thermal-tuner
