@@ -26,11 +26,16 @@ RUN pip install xarray_leaflet
 RUN pip install localtileserver
 RUN pip install rasterstats
 RUN pip install scipy
-RUN pip install opencv-python
+RUN pip install opencv-contrib-python
 RUN pip install ipympl 
 RUN pip install memory_profiler
 RUN pip install line_profiler
 RUN pip install rasterstats
+RUN pip install torch
+RUN pip install networkx
+RUN pip install suncalc
+RUN pip install pyexiftool
+RUN pip install ipycanvas
 #---
 
 ENTRYPOINT ["jupyter", "lab", "--port=8888", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''"]
