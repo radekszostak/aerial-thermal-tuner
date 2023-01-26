@@ -5,3 +5,5 @@
 *-checkpoint.ipynb
 log.txt
 test.ipynb
+/.ipynb_checkpoints
+/.vscode
