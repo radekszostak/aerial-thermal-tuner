@@ -1,0 +1,18 @@
+FROM rszostak/pytorch:debian
+RUN apt-get update && apt-get install -y \
+    exiftool \
+    python3-opencv \
+    gdal-bin \
+    libgdal-dev
+
+ENV CPLUS_INCLUDE_PATH=/usr/include/gdal C_INCLUDE_PATH=/usr/include/gdal
+
+RUN pip install GDAL gdal-utils
+RUN pip install shapely rasterio cartopy --no-binary shapely --no-binary rasterio --no-binary cartopy
+RUN pip install rioxarray geopandas rasterstats scipy opencv-contrib-python
+RUN pip install networkx suncalc tqdm
+
+
+#---
+
+ENTRYPOINT ["jupyter", "lab", "--port=8888", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''"]

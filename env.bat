@@ -1,4 +1,4 @@
-docker build -t rszostak/aerial-thermal-tuner .
+docker build -t rszostak/aerial-thermal-tuner:local -f Dockerfile_local .
 call start cmd /C docker run ^
 -v %cd%:/home/workdir ^
 -v %cd%/.docker/.vscode-server:/root/.vscode-server ^
@@ -8,4 +8,4 @@ call start cmd /C docker run ^
 -e LD_LIBRARY_PATH=/home/workdir/lib ^
 --rm ^
 --shm-size 8G ^
-rszostak/aerial-thermal-tuner
+rszostak/aerial-thermal-tuner:local
