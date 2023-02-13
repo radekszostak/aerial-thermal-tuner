@@ -9,7 +9,7 @@ def recreate_dir(path):
     os.makedirs(path)
     return path
 
-DATA_DIR = "data/rybna_202203240654"
+DATA_DIR = "data/20221220_Sudol"
 MOSAIC_DIR = os.path.abspath(f"{DATA_DIR}/mosaic")
 recreate_dir(MOSAIC_DIR)
 #load rasters from 
