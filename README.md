@@ -4,7 +4,7 @@
 Thermal images taken with uncooled thermal cameras are characterized by large measurement uncertainties related to drift of measurement values and vignette effects. The presented solution offsets these effects by using a single image vignette correction algorithm and an optimization process based on minimizing the value offset between overlapping images using PyTorch Gradient Descent.
 
 *Iplementation of the Single Image Vignette Correction algorithm is based on MATLAB code available on https://github.com/GUOYI1/Vignetting_corrector* \
-*The image georeferencing used in this solution draws heavily from the code available at https://github.com/luna983/stitch-aerial-photos/tree/master/src*
+*The image georeferencing used in this solution is based on the code available at https://github.com/luna983/stitch-aerial-photos/tree/master/src*
 
 ## File structure
 The solution consists of steps that are implemented in separate notebooks:
