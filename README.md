@@ -1,5 +1,6 @@
 # aerial-thermal-tuner
-
+![A mosaic of thermal images before and after calibration.](./before_after.png) \
+A mosaic of thermal images before and after calibration.
 ## Overview
 Thermal images taken with uncooled thermal cameras are characterized by large measurement uncertainties related to drift of measurement values and vignette effects. The presented solution offsets these effects by using a single image vignette correction algorithm and an optimization process based on minimizing the value offset between overlapping images using PyTorch Gradient Descent.
 
